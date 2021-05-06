@@ -403,11 +403,69 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="modal-btn-close" data-modal-close>X
-          <!-- <svg class="close" width="18px" height="18px">
-            <use href="./images/icons/close.svg"></use>
-          </svg> -->
+        <button class="modal-btn-close" data-modal-close>
+          <svg class="close" width="11px" height="11px">
+            <use href="./images/icons/sprite.svg#icon-close"></use>
+          </svg>
         </button>
+
+
+<h2 class="text-modal">Залиште свої дані, ми вам передзвонимо</h2>
+        
+        <form class="form" autocomplete="off">
+          <label for="name" class="form-label">Ім'я</label>
+          <div class="form-field">
+            <input
+              type="text"
+              class="form-input"
+              name="name"
+              id="name"
+              placeholder=" "/>
+            
+            <svg class="icon">
+              <use href="./images/icons/sprite.svg#icon-person"></use>
+            </svg>
+          </div>
+    <label for="tel" class="form-label">Телефон</label>
+          <div class="form-field">
+            <input
+              type="tel"
+              class="form-input"
+              name="tel"
+              id="tel"
+              placeholder=" "/>
+            <svg class="icon">
+              <use href="./images/icons/sprite.svg#icon-phone"></use>
+            </svg>
+          </div>
+<label for="mail" class="form-label">Пошта</label>
+          <div class="form-field">
+            <input
+              type="email"
+              class="form-input"
+              name="mail"
+              id="mail"
+              placeholder=" "
+            />
+            
+            <svg class="icon">
+              <use href="./images/icons/sprite.svg#icon-email"></use>
+            </svg>
+          </div>
+    
+          <label>
+          <span class="form-label">Коментар</span>
+          <textarea name="feedback" rows="5" placeholder="Введіть текст"></textarea>
+        </label>
+
+        <input type="checkbox" name="user-checkbox" class="checkbox visually-hidden" id="checkbox"/>
+              <label class="checkbox-label" for="checkbox">
+                Погоджуюся з розсилкою і приймаю <a href="#" class="checkbox-link">Умови договору</a></label>
+
+          <button type="submit" class="btn">Залишити заявку</button>
+        </form>
+    
+        
       </div>
     </div> 
     <script src="./js/modal.js"></script>
