@@ -29,6 +29,25 @@ body {
   background-color: var(--title-text-color);
 }
 
+/* скидання фокусу */
+a:active,
+a:focus {
+  outline: none;
+}
+
+input,
+textarea {
+  outline: none;
+}
+input:active,
+textarea:active {
+  outline: none;
+}
+
+:focus {
+  outline: none;
+}
+
 .list {
   list-style: none;
   /* скидання відступів у списках*/
@@ -785,7 +804,7 @@ textarea:hover,
   /* width: 1600px; */
   margin-left: auto;
   margin-right: auto;
-  background-color: #2f303a;
+  background-color: var(--bgc-color);
 }
 
 .footer > .conteiner {
@@ -880,7 +899,8 @@ textarea:hover,
   transition: border-color var(--timing-function);
 }
 
-.form-email:hover {
+.form-email:hover,
+:focus {
   border-color: var(--accent-text-color);
 }
 
@@ -889,14 +909,15 @@ textarea:hover,
   display: inline-block;
   align-items: center;
   cursor: pointer;
-  margin-left: 12px;
+  margin-top: 3px;
+  margin-left: 10px;
   margin-right: 28px;
   width: 24px;
   height: 24px;
 }
 
 .btn-send {
-  display: inline-block;
+  padding: 10px 32px;
   width: 200px;
   height: 50px;
   color: var(--title-text-color);
@@ -910,15 +931,10 @@ textarea:hover,
   cursor: pointer;
   border: var(--accent-text-color);
   margin-top: 20px;
-  padding-right: 28px;
+  padding-left: 0px;
   margin-left: 12px;
 }
 
 .block-send {
   color: var(--title-text-color);
 }
-
-/* .form-email::placeholder {
-  text-transform: uppercase;
-  color: #fff;
-} */
