@@ -352,7 +352,7 @@
    <!-- Футер -->
     <footer class="footer">
       <div class="conteiner general">
-        <div class="bloc">
+        <div class="block">
           <a href="./" class="logo link">Web<span class="logo-studio">Studio</span></a>
           <address class="address">
             <ul class="list">
@@ -366,7 +366,7 @@
             </ul>
           </address>
         </div>
-        <div class="bloc">
+        <div class="block">
           <h3 class="title">ПРИЄДНУЙТЕСЯ</h3>
           <ul class="list social-icons-list">
             <li class="social-icons-item-item">
@@ -399,8 +399,24 @@
             </li>
           </ul>
         </div>
-      </div>
+        <div class="block-send">
+          <h3 class="title">ПІДПИШІТЬСЯ НА РОЗСИЛКУ</h3>
+              <input
+              type="email"
+              class="form-email"
+              name="mail"
+              id="mail"
+              placeholder="Email"/>
+
+          <button type="submit" class="btn-send">Підписатися
+            <svg class="send">
+              <use href="./images/icons/sprite.svg#icon-send"></use>
+            </svg>
+          </button>
+        </div>
     </footer>
+
+<!-- modal window -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-btn-close" data-modal-close>
@@ -410,17 +426,20 @@
         </button>
 
 
-<h2 class="text-modal">Залиште свої дані, ми вам передзвонимо</h2>
+<h2 class="text-modal">Залиште свої дані, ми вам зателефонуємо</h2>
         
         <form class="form" autocomplete="off">
           <label for="name" class="form-label">Ім'я</label>
           <div class="form-field">
             <input
               type="text"
+              name="user-name"
               class="form-input"
-              name="name"
-              id="name"
-              placeholder=" "/>
+              pattern="^[a-zA-ZА-Яа-я\s]+$"
+              placeholder=" "
+              required
+              autofocus
+              />
             
             <svg class="icon">
               <use href="./images/icons/sprite.svg#icon-person"></use>
@@ -430,10 +449,12 @@
           <div class="form-field">
             <input
               type="tel"
+              name="user-phone"
               class="form-input"
-              name="tel"
-              id="tel"
-              placeholder=" "/>
+              pattern="[0-9]{10}"
+              placeholder=" "
+              required/>
+
             <svg class="icon">
               <use href="./images/icons/sprite.svg#icon-phone"></use>
             </svg>
@@ -445,8 +466,7 @@
               class="form-input"
               name="mail"
               id="mail"
-              placeholder=" "
-            />
+              placeholder=" "/>
             
             <svg class="icon">
               <use href="./images/icons/sprite.svg#icon-email"></use>
@@ -456,11 +476,11 @@
           <label>
           <span class="form-label">Коментар</span>
           <textarea name="feedback" rows="5" placeholder="Введіть текст"></textarea>
-        </label>
+          </label>
 
         <input type="checkbox" name="user-checkbox" class="checkbox visually-hidden" id="checkbox"/>
               <label class="checkbox-label" for="checkbox">
-                Погоджуюся з розсилкою і приймаю <a href="#" class="checkbox-link">Умови договору</a></label>
+              Погоджуюся з розсилкою і приймаю <a href="#" class="checkbox-link">Умови договору</a></label>
 
           <button type="submit" class="btn">Залишити заявку</button>
         </form>
